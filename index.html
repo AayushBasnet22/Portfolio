@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="porfolio_imgs/aayush-basnet-high-resolution-logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hello everyone !</p>
+                <h1>I'm <span>Aayush Basnet</span> an AI/ML engineer<br>from Nepal.</h1>
+            </div>   
+        </div>
+    </div>
+<!-- This is the about section of my website-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="porfolio_imgs\About-Me.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Aayush Basnet. Currently, I am nearing the end of my Bachelors in Computer Engineering and
+                        am much into Machine Learning and Artificial Intelligence.
+                        I like learning new things and seek to consistently improve through rigorous practice till I'm not satisfied enough.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>AI/ML frameworks</span><br>PyTorch, Tensorflow, Numpy, Pandas</li>
+                            <li><span>Programming</span><br>Python, C++, C</li>
+                            <li><span>Documentation and Presentation</span><br>LaTeX, Microsoft word, Microsoft powerpoint</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Pneumonia Detection System</span><br>AI based Pneumonia predictor.</li>
+                            <li><span>MNIST Digit Recognition</span><br>Identification and distinction of hand-written digits</li>
+                            <li><span>Exploratory Data Analysis</span><br>Visualization and analysis of various attributes on Iris Dataset through various statistical and visual means.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025(expected)</span><br>Bachelor's Degree in Computer Engineering.</li>
+                            <li><span>2018-2020</span><br>High School Degree in Science.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- This is the porfolio section of my website-->   
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="porfolio_imgs/heatmap.jpg">
+                    <div class="layer">
+                        <h3>Pneumonia detection system</h3>
+                        <p>An AI based pneumonia detection system with localization using Convolutional Neural Network (ResNet-18) 
+                           and Class Activation Mapping.</p>
+                        <a href="https://github.com/AayushBasnet22/Minor-project">More</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="porfolio_imgs/tic tac toe.jpeg">
+                    <div class="layer">
+                        <h3>Tic-tac-toe</h3>
+                        <p>A simple tic tac toe game with both computer and human mode.</p>
+                        <a href="https://github.com/AayushBasnet22/Tic-tac-toe">More</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="porfolio_imgs/dijkstra.png">
+                    <div class="layer">
+                        <h3>Shortest path finder</h3>
+                        <p>An implementation of the Dijkstra algorithm to find shortest path between cities in Nepal.</p>
+                        <a href="https://github.com/AayushBasnet22/Dijkstra-project/tree/main/projectDSA_Dijkstra/projectDSA_Dijkstra">More</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/AayushBasnet22?tab=repositories" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- This is the contact section of my website -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Connect with Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> aayushbasnet2002@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +977 9842797591</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/aayush.basnet.351/"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/aayush-basnet-b8715630b/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="porfolio_imgs/Curriculum_vitae.pdf" download class="btn btn2">Download my resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+     </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    var sidemenu = document.getElementById("sidemenu");
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxa7KSFSS-2nWua7qEaf3xDrrKb_P9HwD4P8ILlvz5iSFWXiQzG_DVgCsViEJ8Qfp-1TA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-87px";
+    }
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
